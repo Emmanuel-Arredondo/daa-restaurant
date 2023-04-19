@@ -1,25 +1,25 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { user } from '../_models/user.model';
+import { UserService } from '../_services/user/user.service';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })
-export class UserListComponent {
-  users:user[]=[
-    {username:'emma.arre',name:'Emmanuel Arredondo'},
-    {username:'emma.arre',name:'Emmanuel Arredondo'},
-    {username:'emma.arre',name:'Emmanuel Arredondo'},
+export class UserListComponent implements OnInit {
+  users:user[]=[];
 
-    {username:'emma.arre',name:'Emmanuel Arredondo'},
-
-
-  ];
   displayedColumns: string[] = [
     'username',
     'name',
     'actions',
   ];
+
+  constructor(private userService:UserService) { }
+
+  ngOnInit(): void {
+    this.users = this.userService.getUsers();
+  }
   
   addButtonClicked() {
   alert('boton de adicion activado');
@@ -27,8 +27,7 @@ export class UserListComponent {
   }
   
   deleteButtonClicked() {
-    alert('boton de borrado activado');
-    
+  this.userService.deleteUser();
     }
   
 }

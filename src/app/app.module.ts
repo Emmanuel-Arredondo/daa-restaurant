@@ -24,6 +24,10 @@ import { LoginComponent } from './login/login.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 
+import { MenuService } from './_services/menu/menu.service';
+import { ReservationService } from './_services/reservation/reservation.service';
+import { UserService } from './_services/user/user.service';
+
 
 @NgModule({
   declarations: [
@@ -51,7 +55,7 @@ import { UserListComponent } from './user-list/user-list.component';
     MatIconModule,
     MatTableModule,
   ],
-  providers: [],
+  providers: [MenuService,ReservationService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

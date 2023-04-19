@@ -1,25 +1,16 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Reservation } from '../_models/reservation.model';
+import { ReservationService } from '../_services/reservation/reservation.service';
 
 @Component({
   selector: 'app-reservation-list',
   templateUrl: './reservation-list.component.html',
   styleUrls: ['./reservation-list.component.css']
 })
-export class ReservationListComponent {
-reservations:Reservation[] =[
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},  
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},  
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},  
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
+export class ReservationListComponent implements OnInit{
+reservations:Reservation[] =[];
 
-];
+
 displayedColumns: string[] = [
   'reservationDate',
   'reservationSchedule',
@@ -30,14 +21,19 @@ displayedColumns: string[] = [
   'actions',
 ];
 
+constructor(private reservationService:ReservationService) { }
+
+ngOnInit(): void {
+  this.reservations = this.reservationService.getReservations();
+}
 editButtonClicked() {
 alert('boton de edicion activado');
 
 }
 
 deleteButtonClicked() {
-  alert('boton de borrado activado');
-  
+
+  this.reservationService.deleteReservation();
   }
 
 }
