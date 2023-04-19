@@ -23,7 +23,7 @@ ngOnInit(): void {
 }
 
 formSubmit(form:any) {
-  alert('Gracias por su reserva!\n'+Json.stringify(form.value,null,4));
+  alert('Gracias por su reserva!\n'+JSON.stringify(form.value,null,4));
 }
 
 formCancel() {
