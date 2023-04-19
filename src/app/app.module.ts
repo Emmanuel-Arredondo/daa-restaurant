@@ -22,6 +22,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { LoginComponent } from './login/login.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ReservationListComponent } from './reservation-list/reservation-list.co
     MenuComponent,
     ReservationComponent,
     LoginComponent,
-    ReservationListComponent
+    ReservationListComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
