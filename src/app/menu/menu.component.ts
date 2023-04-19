@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-
+import { Menu } from '../_models/menu.model';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  menuList = [{
+  menuList :Menu[]= [{
     title: 'Enchiladas Suizas',
     image: '../../assets/Menu/enchiladas-1698401.jpg',
     description:'Tortillas de maíz, pechuga de pollo desmenuzada, salsa verde, crema fresca o agria, queso rallado, cebolla y cilantro picado'

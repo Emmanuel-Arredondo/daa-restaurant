@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Reservation } from '../_models/reservation.model';
 
 @Component({
   selector: 'app-reservation-list',
@@ -6,14 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./reservation-list.component.css']
 })
 export class ReservationListComponent {
-reservations=[
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:'2023-03-30T6:00:00:000Z',reservationSchedule:'12',guests:7},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:'2023-03-30T6:00:00:000Z',reservationSchedule:'12',guests:7},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:'2023-03-30T6:00:00:000Z',reservationSchedule:'12',guests:7},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:'2023-03-30T6:00:00:000Z',reservationSchedule:'12',guests:7},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:'2023-03-30T6:00:00:000Z',reservationSchedule:'12',guests:7},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:'2023-03-30T6:00:00:000Z',reservationSchedule:'12',guests:7},
-  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:'2023-03-30T6:00:00:000Z',reservationSchedule:'12',guests:7},
+reservations:Reservation[] =[
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},  
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},  
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},  
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
+  {name:'Emmanuel Arredondo',email:'emmanuelarredondo@hotmail.com',phone:'55-1234-5678',people:2,reservationDate:new Date('2023,01,07'),reservationSchedule:12},
 
 ];
 displayedColumns: string[] = [
