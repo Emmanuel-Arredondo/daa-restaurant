@@ -7,11 +7,15 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,

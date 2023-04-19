@@ -9,4 +9,9 @@
     background-color: rgb(50, 50, 50);
     background-blend-mode: multiply;
 
+    color:rgb(250, 250, 250)
+}
+
+.spacer{
+    flex:1 1 auto;
 }
