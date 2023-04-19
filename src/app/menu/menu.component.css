@@ -1,0 +1,12 @@
+:host{
+    color: rgb(50, 50, 50);
+    position: absolute;
+left: 35%;
+top: 10%;
+}
+
+.menu-card {
+    max-width: 400px;
+    margin:20px auto;
+  }
+  

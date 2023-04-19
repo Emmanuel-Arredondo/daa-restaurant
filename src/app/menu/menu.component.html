@@ -1,1 +1,13 @@
-<p>menu works!</p>
+<mat-card class="menu-card" *ngFor="let dish of menuList">
+    <mat-card-header>
+      <mat-card-title>{{dish.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{dish.image}}" alt="Foto de enchiladas suizas">
+    <mat-card-content>
+      <p>
+        {{dish.description}}
+      </p>
+    </mat-card-content>
+
+  </mat-card>
+  

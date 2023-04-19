@@ -1,5 +1,12 @@
 :host{
+    color:rgb(250, 250, 250);
+}
+
+
+
+#bg-image{
     display: block;
+    position:fixed;
     width: 100%;
     height: 100%;
     background-image: url(../assets/terrazaweb.png);
@@ -8,9 +15,9 @@
     background-size: cover;
     background-color: rgb(50, 50, 50);
     background-blend-mode: multiply;
-
-    color:rgb(250, 250, 250)
+    z-index: -1;
 }
+
 
 .spacer{
     flex:1 1 auto;
