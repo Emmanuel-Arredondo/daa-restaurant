@@ -22,7 +22,18 @@ displayedColumns: string[] = [
   'people',
   'name',
   'email',
-  'phone'
+  'phone',
+  'actions',
 ];
+
+editButtonClicked() {
+alert('boton de edicion activado');
+
+}
+
+deleteButtonClicked() {
+  alert('boton de borrado activado');
+  
+  }
 
 }
