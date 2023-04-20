@@ -9,14 +9,27 @@ import { environment } from 'src/environments/environment.development';
   providedIn: 'root'
 })
 export class AuthService {
+  private token:string='';
 
   constructor(private http:HttpClient) { }
+
+  getToken():string{
+    return this.token;
+  }
+
+  isAutheticated():boolean{
+    return this.token !== '';
+  }
+
+  logout(){
+    this.token='';
+  }
 
   login(loginInfo:LoginInfo){
     return this.http.post< {token:string}  >(environment.apiUrl+'/login',loginInfo)
     .pipe(
       catchError(this.handleError),
-      tap(res=>console.log(res.token))
+      tap(res=>this.token=res.token)
     );
 }
 
