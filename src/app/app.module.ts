@@ -23,6 +23,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { LoginComponent } from './login/login.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
+import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
 
 import { MenuService } from './_services/menu/menu.service';
@@ -39,6 +40,7 @@ import { UserService } from './_services/user/user.service';
     ReservationComponent,
     LoginComponent,
     ReservationListComponent,
+    UserComponent,
     UserListComponent
   ],
   imports: [
